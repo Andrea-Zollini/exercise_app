@@ -23,9 +23,9 @@ return new class extends Migration
             $table->unsignedInteger('current_progress')->nullable();
             $table->text('notes')->nullable();
 
-            $table->unsignedInteger('height');
-            $table->unsignedInteger('weight');
-            $table->unsignedInteger('age');
+            $table->unsignedInteger('height')->nullable();
+            $table->unsignedInteger('weight')->nullable();
+            $table->unsignedInteger('age')->nullable();
 
 
             $table

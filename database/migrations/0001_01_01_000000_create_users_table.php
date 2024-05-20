@@ -30,6 +30,7 @@ return new class extends Migration
 
             $table
                 ->foreignUlid('goal_id')
+                ->nullable()
                 ->index()
                 ->constrained()
                 ->cascadeOnDelete();

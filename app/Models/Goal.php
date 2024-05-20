@@ -13,7 +13,7 @@ class Goal extends Model
 
     protected $fillable = [
         'name',
-        'label',
+        // 'label',
     ];
 
     public function user()

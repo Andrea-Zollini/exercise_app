@@ -12,12 +12,30 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
+            $table->ulid('id')->primary();
+
+
             $table->string('name');
             $table->string('email')->unique();
-            $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->rememberToken();
+
+            $table->dateTime('target_date')->nullable();
+            $table->unsignedInteger('current_progress')->nullable();
+            $table->text('notes')->nullable();
+
+            $table->unsignedInteger('height');
+            $table->unsignedInteger('weight');
+            $table->unsignedInteger('age');
+
+
+            $table
+                ->foreignUlid('goal_id')
+                ->index()
+                ->constrained()
+                ->cascadeOnDelete();
+
+
+            $table->timestamp('email_verified_at')->nullable();
             $table->timestamps();
         });
 
@@ -36,6 +54,7 @@ return new class extends Migration
             $table->integer('last_activity')->index();
         });
     }
+
 
     /**
      * Reverse the migrations.

@@ -20,7 +20,19 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'target_date',
+        'current_progress',
+        'notes',
+        'height',
+        'weight',
+        'age',
+        'goal_id'
     ];
+
+    public function goal()
+    {
+        return $this->hasOne(Goal::class, 'goal_id');
+    }
 
     /**
      * The attributes that should be hidden for serialization.

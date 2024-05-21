@@ -4,7 +4,7 @@
         @if ($step === 1)
             <x-form.form-step heading="What's your goal?" step="{{$step}}" goals="{{$goals}}"/>
         @elseif ($step === 2)
-            <x-form.form-step heading="Insert your age and weight" step="{{$step}}"/>
+            <x-form.form-step heading="Insert your age, height and weight" step="{{$step}}"/>
         @elseif ($step === 3)
             <x-form.form-step heading="What's your target wieght?" step="{{$step}}"/>
         @endif

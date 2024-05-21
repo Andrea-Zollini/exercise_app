@@ -17,6 +17,13 @@
                 required
                 >
             <input 
+                wire:model='height'
+                type="text" 
+                placeholder="Height (in cm)"
+                class="px-2 py-3 bg-transparent border-none outline-none appearance-none rounded-xl" 
+                required
+                >
+            <input 
                 wire:model='initial_weight' 
                 type="text" 
                 placeholder="Weight (in Kg)"

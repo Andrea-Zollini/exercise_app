@@ -6,13 +6,16 @@
         @elseif ($step === 2)
             <x-form.form-step heading="Insert your age, height and weight" step="{{$step}}"/>
         @elseif ($step === 3)
-            <x-form.form-step heading="What's your target wieght?" step="{{$step}}"/>
+            <x-form.form-step heading="What's your target weight?" step="{{$step}}"/>
         @endif
 
 
         <div class="flex justify-center mt-10 space-x-3">
             @if ($step !== $total_steps)
                 <button
+                    @if ($step === 1)
+                        disabled
+                    @endif
                     class="{{ $disabled ? 'opacity-50 pointer-events-none' : '' }} px-4 py-3 font-bold text-gray-200 transition duration-150 ease-out hover:ease-in bg-gray-600 rounded-full shadow-md hover:bg-gray-800"
                     wire:click.prevent='previousStep'>
                     <i class="fa-solid fa-arrow-left"></i>

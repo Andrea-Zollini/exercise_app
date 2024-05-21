@@ -14,5 +14,8 @@ class GoalsTableSeeder extends Seeder
     public function run(): void
     {
         Goal::factory()->create();
+        Goal::factory()->create([
+            'label' => 'lose weight',
+        ]);
     }
 }

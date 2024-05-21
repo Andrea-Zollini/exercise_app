@@ -12,8 +12,7 @@ class Goal extends Model
     use HasUlids;
 
     protected $fillable = [
-        'name',
-        // 'label',
+        'label',
     ];
 
     public function user()

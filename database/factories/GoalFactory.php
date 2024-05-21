@@ -17,7 +17,7 @@ class GoalFactory extends Factory
     public function definition(): array
     {
         return [
-            'name' => 'build_muscle',
+            'label' => 'build muscle',
         ];
     }
 }

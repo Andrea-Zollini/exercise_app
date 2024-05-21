@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('goals', function (Blueprint $table) {
             $table->ulid('id')->primary();
 
-            $table->enum('name', ['build_muscle', 'lose_weight'])->default('build_muscle');
+            $table->string('label');
 
             $table->timestamps();
         });

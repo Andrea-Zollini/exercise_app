@@ -1,7 +1,9 @@
 <x-layouts.app title="Dashboard">
-    <h1 class="font-3xl">Hi {{Auth::user()->name}}</h1>
-    <form action="{{route('logout')}}" method="POST">
-        @csrf
-        <button class="bg-orange-600 hover:bg-orange-800 text-gray-200 font-bold py-2 px-4 rounded shadow-md" type="submit">log out</button>
-    </form>
+    <div class="flex flex-col items-center justify-center h-full">
+        <livewire:form>
+            <form action="{{route('logout')}}" method="POST" class="mt-10">
+                @csrf
+                <button class="px-4 py-2 font-bold text-gray-200 bg-orange-600 rounded shadow-md hover:bg-orange-800" type="submit">log out</button>
+            </form>
+    </div>
 </x-layouts.app>

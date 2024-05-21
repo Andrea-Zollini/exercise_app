@@ -33,19 +33,19 @@ class UserFactory extends Factory
                 int1: 0,
                 int2: 100
             ),
-            'height' => $this->faker->numberBetween(
-                int1: 150,
-                int2: 200
-            ),
-            $initial_weight = 'initial_weight' => $this->faker->numberBetween(
-                int1: 50,
-                int2: 100
-            ),
-            'target_weight' => (int)$initial_weight + 10,
-            'age' => $this->faker->numberBetween(
-                int1: 20,
-                int2: 70
-            ),
+            // 'height' => $this->faker->numberBetween(
+            //     int1: 150,
+            //     int2: 200
+            // ),
+            // $initial_weight = 'initial_weight' => $this->faker->numberBetween(
+            //     int1: 50,
+            //     int2: 100
+            // ),
+            // 'target_weight' => (int)$initial_weight + 10,
+            // 'age' => $this->faker->numberBetween(
+            //     int1: 20,
+            //     int2: 70
+            // ),
             'email_verified_at' => now(),
         ];
     }

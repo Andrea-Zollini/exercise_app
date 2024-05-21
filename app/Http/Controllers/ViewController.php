@@ -21,7 +21,8 @@ class ViewController extends Controller
 
     public function dashboard(): View
     {
-        $user = Auth::user();
-        return view('dashboard', ['user' => $user]);
+        // $user = Auth::user();
+        // dd($user);
+        return view('dashboard');
     }
 }

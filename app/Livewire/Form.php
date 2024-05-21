@@ -3,7 +3,6 @@
 namespace App\Livewire;
 
 use App\Models\Goal;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Livewire\Component;
@@ -16,12 +15,13 @@ class Form extends Component
     public $goals;
     public $selected_goal = null;
     public $age = '';
+    public $height = '';
     public $initial_weight = '';
     public $target_weight = '';
 
     public function setGoal($id): Void
     {
-        $this->selected_goal = Goal::findOrFail($id);
+        $this->selected_goal = $id;
         // Auth::user()->goal = $selected_goal;
         $this->step = 2;
     }
@@ -42,14 +42,16 @@ class Form extends Component
         $this->step++;
     }
 
-    public function submit(Request $request)
+    public function submit()
     {
         $user = Auth::user();
-        $user->goal = $this->selected_goal;
+        $user->goal_id = $this->selected_goal;
         $user->age = $this->age;
+        $user->height = $this->height;
         $user->initial_weight = $this->initial_weight;
         $user->target_weight = $this->target_weight;
-        return redirect('/dashboard');
+        $user->save();
+        return redirect()->route('dashboard');
     }
 
     public function render(): View

@@ -24,7 +24,8 @@ return new class extends Migration
             $table->text('notes')->nullable();
 
             $table->unsignedInteger('height')->nullable();
-            $table->unsignedInteger('weight')->nullable();
+            $table->unsignedInteger('initial_weight')->nullable();
+            $table->unsignedInteger('target_weight')->nullable();
             $table->unsignedInteger('age')->nullable();
 
 

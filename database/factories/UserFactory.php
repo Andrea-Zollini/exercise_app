@@ -37,10 +37,11 @@ class UserFactory extends Factory
                 int1: 150,
                 int2: 200
             ),
-            'weight' => $this->faker->numberBetween(
+            $initial_weight = 'initial_weight' => $this->faker->numberBetween(
                 int1: 50,
                 int2: 100
             ),
+            'target_weight' => (int)$initial_weight + 10,
             'age' => $this->faker->numberBetween(
                 int1: 20,
                 int2: 70

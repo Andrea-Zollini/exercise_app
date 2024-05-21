@@ -28,7 +28,8 @@ class User extends Authenticatable
         'current_progress',
         'notes',
         'height',
-        'weight',
+        'initial_weight',
+        'target_weight',
         'age',
         'goal_id'
     ];

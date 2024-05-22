@@ -3,6 +3,7 @@
 namespace App\Livewire;
 
 use App\Models\Goal;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\View\View;
 use Livewire\Component;
@@ -22,7 +23,6 @@ class Form extends Component
     public function setGoal($id): Void
     {
         $this->selected_goal = $id;
-        // Auth::user()->goal = $selected_goal;
         $this->step = 2;
     }
 

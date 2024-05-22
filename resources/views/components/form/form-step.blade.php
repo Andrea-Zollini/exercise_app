@@ -1,9 +1,9 @@
 @props(['heading', 'step', 'goals'])
 
-<div class="flex flex-col items-center">
+<div class="flex flex-col">
     <h3 class="mb-10 text-5xl text-center">{{ $heading }}</h3>
     @if ($this->step === 1)
-        <div>
+        <div class="mx-auto">
             @foreach ($this->goals as $goal)
                 <button wire:click.prevent="setGoal('{{ $goal->id }}')"
                     class="p-6 m-3 bg-white/10 rounded-xl">{{ ucfirst($goal->label) }}</button>

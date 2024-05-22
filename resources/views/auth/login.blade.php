@@ -1,11 +1,13 @@
 <x-layouts.guest title="Login Page">
-    <div class="flex min-h-full flex-col justify-center px-6 py-12 lg:px-8">
-          <div class="bg-black/10 dark:bg-white/10 pb-10 px-10 rounded-2xl sm:mx-auto sm:w-full sm:max-w-sm">
+    <div class="flex flex-col justify-center min-h-full px-6 py-12 lg:px-8">
+          <div class="px-10 pb-10 bg-black/10 dark:bg-white/10 rounded-2xl sm:mx-auto sm:w-full sm:max-w-sm">
             <div class="">
-              {{-- <img class="mx-auto h-10 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=orange&shade=600" alt="Your Company"> --}}
-              <x-ui.h2 class="mt-10 text-center">
+              <a href="{{route('index')}}">
+                <x-ui.image src="logo.svg" alt="very nice logo" />
+              </a>
+              <x-text.h2 class="mt-10 text-center">
                 Sign in to your account
-              </x-ui.h2>
+              </x-text.h2>
             </div>
           
             <div class="mt-10 ">

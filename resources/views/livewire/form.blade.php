@@ -1,6 +1,5 @@
 <div class="p-8 bg-white/10 rounded-2xl">
     <form wire:submit.prevent="submit" class="flex flex-col">
-        {{-- <p>{{$goals}}</p> --}}
         @if ($step === 1)
             <x-form.form-step heading="What's your goal?" step="{{$step}}" goals="{{$goals}}"/>
         @elseif ($step === 2)
